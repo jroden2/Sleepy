@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
+	"net/http/httptest"
 	"reflect"
 	"testing"
 )
@@ -15,8 +15,8 @@ func TestNewExampleService(t *testing.T) {
 }
 
 func Test_exampleService_ExposedFunction(t *testing.T) {
-	gotStatus, bodyContent := NewExampleService().ExposedFunction()
-
-	assert.Equal(t, gotStatus, 200)
-	assert.Equal(t, bodyContent, gin.H{"status":"Hello, World. - Gin"})
+	w := httptest.NewRecorder()
+	NewExampleService().ExposedFunction(w)
+	assert.Equal(t, w.Code, 200)
+	assert.Equal(t, w.Body.String(), "Hello, World - Vanilla\n")
 }

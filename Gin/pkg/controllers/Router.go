@@ -18,6 +18,9 @@ func Initialise(logger *zerolog.Logger) {
 	gin.SetMode(gin.DebugMode)
 
 	PORT := os.Getenv("ServerPort")
+	if PORT == "" {
+		PORT = "8080"
+	}
 	hostPort := fmt.Sprintf(":%s", PORT)
 	logger.Info().Msg(hostPort)
 

@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 type exampleService struct {
@@ -15,9 +15,10 @@ func NewExampleService(/*we would pass dependencies here as part of the construc
 }
 
 type ExampleService interface {
-	ExposedFunction() (int, any)
+	ExposedFunction(w http.ResponseWriter)
 }
 
-func (s *exampleService) ExposedFunction() (int, any) {
-	return 200, gin.H{"status":"Hello, World. - Gin"}
+func (s *exampleService) ExposedFunction(w http.ResponseWriter) {
+	w.WriteHeader(200)
+	w.Write([]byte("Hello, World - Vanilla\n"))
 }

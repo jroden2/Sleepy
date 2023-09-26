@@ -4,6 +4,11 @@ Sleepy is a project to create a series of example structures for the creation of
 
 These example template/structures will allow the easy design and deployment by following a chosen pattern and framework, each of which have their support networks, documentation (of various qualities) and examples around the internet. This project is an effort to create a central repository to house them all in one place.
 
+## How?
+Once you pull this in to your environment of choice, you can simply navigate to the framework of choice, head to the `cmd` folder and run Main.go
+
+This will then work to pick up the port from the `.env` file, when you visit `localhost:<PORT>` it will respond with JSON or String value `Hello, World. - {FRAMEWORK NAME}`
+
 ## What frameworks?
 Currently I have created two examples with others planned, each is linked where possible to their example github/website - Those already ticked have been completed.
  - [x] [Go Vanilla (HTTP package)](https://cs.opensource.google/go/go)

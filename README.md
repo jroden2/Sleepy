@@ -8,7 +8,7 @@ These example template/structures will allow the easy design and deployment by f
 Currently I have created two examples with others planned, each is linked where possible to their example github/website - Those already ticked have been completed.
  - [x] [Go Vanilla (HTTP package)](https://cs.opensource.google/go/go)
  - [x] [Gin-Gonic](https://github.com/gin-gonic/gin)
- - [ ] [Echo by LabStack](https://github.com/labstack/echo)
+ - [x] [Echo by LabStack](https://github.com/labstack/echo)
  - [ ] [Fiber](https://github.com/gofiber/fiber)
  - [ ] [BeeGo (Aimed at Enterprise)](https://github.com/beego/beego)
 

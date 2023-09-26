@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-type handler struct{
+type handler struct {
 	es services.ExampleService
 }
 
@@ -25,5 +25,5 @@ type Handler interface {
 }
 
 func (h *handler) ExampleHandler(w http.ResponseWriter, r *http.Request) {
-	_,_ = h.es.ExposedFunction(w)
+	h.es.ExposedFunction(w)
 }

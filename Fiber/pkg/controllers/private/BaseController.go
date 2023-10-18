@@ -21,6 +21,7 @@ func NewBaseController(logger *zerolog.Logger) BaseController {
 }
 
 type BaseController interface {
+	Greet(ctx *fiber.Ctx)
 }
 
 func (c *baseController) Greet(ctx *fiber.Ctx) {

@@ -15,5 +15,5 @@ type ExampleService interface {
 }
 
 func (s *exampleService) ExposedFunction() (int, any) {
-	return 200, struct{ status string }{status: "Hello, World. - Fiber"}
+	return 200, struct{ Status string }{Status: "Hello, World. - Fiber"}
 }

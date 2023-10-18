@@ -17,5 +17,5 @@ func Test_exampleService_ExposedFunction(t *testing.T) {
 	gotStatus, bodyContent := NewExampleService().ExposedFunction()
 
 	assert.Equal(t, gotStatus, 200)
-	assert.Equal(t, bodyContent, struct{ status string }{status: "Hello, World. - Fiber"})
+	assert.Equal(t, bodyContent, struct{ Status string }{Status: "Hello, World. - Fiber"})
 }

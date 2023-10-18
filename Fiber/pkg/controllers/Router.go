@@ -14,9 +14,10 @@ func Initialise(logger *zerolog.Logger) {
 
 	router := fiber.New()
 
-	router.Group("/v1")
+	router.Group("")
 	{
-		private.Routes(router)
+		private.Routes(router, logger)
 	}
 
+	router.Listen(":8080")
 }

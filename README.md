@@ -19,6 +19,7 @@ Currently I have created two examples with others planned, each is linked where 
 ### To Do?
  - [ ] [Kratos](https://github.com/go-kratos/kratos)
  - [ ] [BeeGo (Aimed at Enterprise)](https://github.com/beego/beego)
+ - [ ] [Chi](https://github.com/go-chi/chi)
 
 ## What Licence?
 This project is released under MIT License.
